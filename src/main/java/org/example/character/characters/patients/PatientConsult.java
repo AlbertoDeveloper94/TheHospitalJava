@@ -12,11 +12,12 @@ public class PatientConsult extends Patient implements PatientsConsult {
     private String appoinmentStatus;
     private String nameNurse;
 
-    public PatientConsult(String name, String dni, String address, String email, String phone, char gender, LocalDate birthdate, String diagnosis, String treatment, String medicAssigned, int numberRoom, boolean isHospitalized, int numberWaitingRoom, LocalDate appointmentDate, String appoinmentStatus) {
+    public PatientConsult(String name, String dni, String address, String email, String phone, char gender, LocalDate birthdate, String diagnosis, String treatment, String medicAssigned, int numberRoom, boolean isHospitalized, int numberWaitingRoom, LocalDate appointmentDate, String appoinmentStatus, String nameNurse) {
         super(name, dni, address, email, phone, gender, birthdate, diagnosis, treatment, medicAssigned, numberRoom, isHospitalized);
         this.numberWaitingRoom = numberWaitingRoom;
         this.appointmentDate = appointmentDate;
         this.appoinmentStatus = appoinmentStatus;
+        this.nameNurse = nameNurse;
     }
 
     @Override
