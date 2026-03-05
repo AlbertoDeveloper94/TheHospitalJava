@@ -1,10 +1,11 @@
 package org.example.character.characters.patients;
 
 import org.example.character.characters.Patient;
+import org.example.character.characters.actions.patients.PatientsAmbulance;
 
 import java.time.LocalDate;
 
-public class PatientAmbulance extends Patient {
+public class PatientAmbulance extends Patient implements PatientsAmbulance {
 
     private String levelStatus;
 
@@ -18,6 +19,24 @@ public class PatientAmbulance extends Patient {
         this.numberAmbulance = numberAmbulance;
     }
 
+    @Override
+    public String displayInfoCharacter(){
+        return super.displayInfoCharacter() +
+                "\nEstado del paciente: " + levelStatus +
+                "\nSignos Vitales: " + vitalSigns +
+                "\nId de la ambulancia: " + numberAmbulance;
+    }
+
+    @Override
+    public void medicalOperation() {
+
+        System.out.println("El paciente " + getName() + " se operó exitosamente");
+    }
+
+    @Override
+    public void rehabilitation() {
+        System.out.println("El paciente " + getName() + " se mandó a rehabilitación");
+    }
 
     public String getLevelStatus() {
         return levelStatus;

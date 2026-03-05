@@ -23,7 +23,15 @@ public abstract class Character {
         this.gender = gender;
         this.birthdate = birthdate;
     }
-
+    public String displayInfoCharacter(){
+        return "Nombre: " + name +
+                "\nDNI: " + dni +
+                "\nDirección: " + address +
+                "\nEmail: " + email +
+                "\nTeléfono: " + phone +
+                "\nGénero: " + gender +
+                "\nFecha de nacimiento: " + birthdate;
+    }
 
     public String getName() {
         return name;

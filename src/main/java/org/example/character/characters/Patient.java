@@ -26,6 +26,16 @@ public abstract class Patient extends Character implements AllPatients {
         this.isHospitalized = isHospitalized;
     }
 
+    @Override
+    public String displayInfoCharacter(){
+        return super.displayInfoCharacter() +
+                "\nDiagnóstico: " + diagnosis +
+                "\nTratamiento: " + treatment +
+                "\nMédico asignado: " + medicAssigned +
+                "\nNúmero de habitación: " + numberRoom +
+                "\nHospitalizado: " + (isHospitalized ? "Sí" : "No");
+    }
+
 
     @Override
     public void admision() {
