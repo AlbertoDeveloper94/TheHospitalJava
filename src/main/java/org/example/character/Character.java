@@ -1,6 +1,7 @@
 package org.example.character;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public abstract class Character {
 
@@ -8,12 +9,12 @@ public abstract class Character {
     private String dni;
     private String address;
     private String email;
+    private String phone;
 
-    private int phone;
     private char gender;
-    private Date birthdate;
+    private LocalDate birthdate;
 
-    public Character(String name, String dni, String address, String email, int phone, char gender, Date birthdate) {
+    public Character(String name, String dni, String address, String email, String phone, char gender, LocalDate birthdate) {
         this.name = name;
         this.dni = dni;
         this.address = address;
@@ -55,11 +56,11 @@ public abstract class Character {
         this.email = email;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -71,11 +72,11 @@ public abstract class Character {
         this.gender = gender;
     }
 
-    public Date getBirthdate() {
+    public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
 }
