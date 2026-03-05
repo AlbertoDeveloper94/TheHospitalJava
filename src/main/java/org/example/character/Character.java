@@ -24,6 +24,7 @@ public abstract class Character {
         this.birthdate = birthdate;
     }
 
+
     public String getName() {
         return name;
     }
@@ -79,4 +80,6 @@ public abstract class Character {
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
+
+
 }
